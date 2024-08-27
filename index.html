@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider-Ft. Tissot</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-black" id="body">
+  
+  <nav class="nav-bar w-full py-6 flex items-center justify-between px-6 fixed top-0 left-0 z-10">
+    <div class="nav-bar__logo flex items-center space-x-2 ml-4">
+      <img src="/Mask group.png" alt="Logo" class="nav-bar__logo-icon h-10">
+      <p class="nav-bar__title">KING</p>
+    </div>
+    <div class="nav-bar__links hidden md:flex items-center space-x-24">
+      <a href="https://seikowatches.co.in/collections/king-seiko" class="nav-bar__item" target="_blank">Shop</a>
+      <a href="https://www.thetrendspotter.net/20-top-luxury-watch-brands-know/" class="nav-bar__item">Brands</a>
+      <a href="contact.html" class="nav-bar__item" target="_blank">Contact Us</a>
+      <button class="nav-bar__signup-button">Sign Up</button>
+    </div>
+    <button class="hamburger-menu md:hidden">
+      <span class="hamburger-menu__bar"></span>
+      <span class="hamburger-menu__bar"></span>
+      <span class="hamburger-menu__bar"></span>
+    </button>
+  </nav>
+
+  <section class="content w-4/5 mt-20">
+    <div class="description text-center mb-8 md:text-left md:mb-0">
+      <h1 class="description__title" id="title"></h1> 
+      <h2 class="description__subtitle" id="subtitle"></h2> 
+      <p class="description__text text-white max-w-2xl" id="description"></p> 
+      <span class="description__price" id="price"></span>
+      <div class="description__social-media mt-4 flex justify-center md:justify-start">
+        <a href="https://facebook.com" target="_blank" class="social-media__icon"><img src="/Vector (1).png" alt=""></a>
+        <a href="https://twitter.com" target="_blank" class="social-media__icon"><img src="/Vector.png" alt=""></a>
+        <a href="https://youtube.com" target="_blank" class="social-media__icon"><img src="/Exclude.png" alt=""></a>
+      </div>
+    </div>
+
+    <div class="carousel splide" aria-label="Watch Carousel">
+      <div class="splide__track">
+        <ul class="splide__list" id="splide-list"></ul>
+      </div>
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev"><span class="material-symbols-outlined">
+          arrow_back
+          </span></button>
+        <button class="splide__arrow splide__arrow--next"><span class="material-symbols-outlined">
+          arrow_forward
+          </span></button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

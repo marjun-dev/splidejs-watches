@@ -1,0 +1,193 @@
+:root {
+    --nav-height: 4rem;
+    --nav-spacing: 5px; /* Increased spacing */
+    --nav-item-font-size: 1.75rem;
+    --nav-signup-font-size: 1.5rem;
+    --nav-signup-border-radius: 2rem; /* Rounded border for Sign Up */
+    --title-font-size: 3.5rem; /* Increased size */
+    --subtitle-font-size: 3rem; /* Adjusted size */
+    --description-font-size: 1.25rem;
+    --price-font-size: 2.5rem;
+    --social-icon-size: 40px; /* Increased size */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: var(--background-color, #000);
+  }
+  
+  .nav-bar {
+    height: var(--nav-height);
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    color: black;
+    padding-top: 2rem; /* More padding top */
+  }
+  
+  .nav-bar__logo {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+  }
+  
+  .nav-bar__title {
+    font-size: 2rem;
+    color: black;
+    padding-right: 30px;
+  }
+  
+  .nav-bar__item {
+    font-size: var(--nav-item-font-size);
+    margin: 0 var(--nav-spacing);
+    color: black;
+    padding-right: 40px;
+  }
+  
+  .nav-bar__item:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-bar__signup-button {
+    font-size: var(--nav-signup-font-size);
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--nav-signup-border-radius);
+    background-color: black;
+    color: white;
+  }
+  
+  .description {
+    font-size: var(--description-font-size);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .description__title {
+    font-size: var(--title-font-size);
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 65px;
+  }
+  
+  .description__subtitle {
+    font-size: var(--subtitle-font-size);
+    color: rgb(255, 255, 255);
+    padding-bottom: 40px;
+    color: white; /* Default color */
+    font-weight: bolder;
+  }
+  
+  .description__subtitle span {
+    color: black; /* Black color for 'Choose Us' */
+    font-weight: bolder;
+  }
+  
+  .description__text {
+    font-size: var(--description-font-size);
+    padding-inline: 10px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    line-height: 2; /* Padding between lines */
+  }
+  
+  .description__price {
+    font-size: var(--price-font-size);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+  }
+  
+  .description__social-media {
+    display: flex;
+    gap: 1rem;
+    padding-top: 30px;
+  }
+  
+  .social-media__icon img {
+    border: 2px solid white; /* White border for social icons */
+    border-radius: 50%; /* Round border */
+    padding: 4px;
+    width: var(--social-icon-size);
+    height: var(--social-icon-size);
+  }
+  
+  .social-media__icon:hover {
+    text-decoration-color: rgb(255, 255, 255);
+  }
+  
+  .hamburger-menu {
+    display: none; /* Removed for desktop */
+  }
+  
+  .splide__arrows {
+    display: block;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .splide__arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 767px) {
+    .nav-bar__links {
+      display: none;
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  
+    .nav-bar.open .nav-bar__links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      background-color: white;
+      position: absolute;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      padding: 1rem;
+    }
+  
+    .description__social-media {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .carousel {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .content {
+      display: flex;
+      align-items: center;
+    }
+    .description {
+      flex: 1;
+      padding-right: 20px;
+    }
+    .carousel {
+      flex: 0.8;
+      margin-left: auto;
+    }
+  }
